@@ -1,37 +1,33 @@
 #include <screen.h>
 #include <keypad.h>
+#include "draw.h"
+#include "clown_movement.h"
 
 #define TO_STR(ch) ( ( ((ch) >= 0 ) && ((ch) <= 9) )? (48 + (ch)) : ('a' + ((ch) - 10)) )
 
 int main() {
     clear_screen();
-    set_color(WHITE, BLACK);
-    set_cursor(29, 15);
-    /* put_char('H');
-    put_char('e');
-    put_char('l');
-    put_char('l');
-    put_char('o');
-    put_char('!'); */
-    puts("Hello!");
-    
-    uint8_t f, b;
-    get_color(&f, &b);
-    
-    set_color(RED, BLACK);
-    puts("\x1\x2");
-    set_color(f, b);
+    tiempo_milisegundos = *MS_COUNTER_REG_ADDR;
+    drawlaberinto();
+    // set_cursor(10, 45);
+    // puts("Para reiniciar juego presione 'p'");
     
     keypad_init();
     while (1) {
         uint8_t k = keypad_getkey();
-        set_cursor(2, 1);
-        put_char(TO_STR(k & 0xf));
-        set_cursor(3, 1);
-        put_char(TO_STR((k & 0xf0) >> 4));
+        set_cursor(1,1);
+        puts("Cerezas:");
+        set_cursor(1,12);
+        put_char(TO_STR(cont_unidades & 0xf));
+        set_cursor(1,11);
+        put_char(TO_STR(cont_decimas & 0xf));
+        if(cont_centecimas>0){
+            set_cursor(1,10);
+            put_char(TO_STR(cont_centecimas & 0xf));
+        }
+
         if (k != 0) {
-            set_cursor(10, 15);
-            puts("Key press");
+            moveFigure(k);
         }
     }
 
