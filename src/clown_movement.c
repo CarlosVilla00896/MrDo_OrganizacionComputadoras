@@ -55,40 +55,6 @@ bool validateMovement(uint8_t row, uint8_t col){
     return false;
 }
 void cherriesCounter(uint8_t row, uint8_t col){
-    // if((row >= 7 && row <=10) && (col == 6)){
-    //     counterSimulator();
-    // }else if((row >= 7 && row <=10) && (col == 9)){
-    //     counterSimulator();
-    // }else if((row >= 14 && row <=17) && (col == 3)){
-    //     counterSimulator();
-    // }else if((row >= 14 && row <=17) && (col == 35)){
-    //     counterSimulator();
-    // }else if((row = 14) && (col >=6 && col <= 15)){
-    //     counterSimulator();
-    // }else if((row = 15) && (col >=6 && col <= 15)){
-    //     counterSimulator();
-    // }else if((row = 20) && (col >=43 && col <= 52)){
-    //     counterSimulator();
-    // }else if((row = 21) && (col >=43 && col <= 52)){
-    //     counterSimulator();
-    // }else if((row >= 9 && row <=12) && (col == 46)){
-    //     counterSimulator();
-    // }else if((row >= 9 && row <=12) && (col == 49)){
-    //     counterSimulator();
-    // }else if((row = 20) && (col >=22 && col <= 31)){
-    //     counterSimulator();
-    // }else if((row = 21) && (col >=22 && col <= 31)){
-    //     counterSimulator();
-    // }else if((row >= 14 && row <=17) && (col == 60)){
-    //     counterSimulator();
-    // }else if((row >= 14 && row <=17) && (col == 63)){
-    //     counterSimulator();
-    // }else if((row = 6) && (col >=22 && col <= 31)){
-    //     counterSimulator();
-    // }else if((row = 7) && (col >=22 && col <= 31)){
-    //     counterSimulator();
-    // }
-
     if(row == 7 && (col == 6 || col ==7)){
         counterSimulator();
     }else if(row == 8 && (col == 6 || col ==7)){
