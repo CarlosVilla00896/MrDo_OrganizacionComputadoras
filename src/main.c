@@ -9,8 +9,8 @@ int main() {
     clear_screen();
     tiempo_milisegundos = *MS_COUNTER_REG_ADDR;
     drawlaberinto();
-    // set_cursor(10, 45);
-    // puts("Para reiniciar juego presione 'p'");
+    set_cursor(28, 25);
+    puts("Para reiniciar juego presione 'p'");
     
     keypad_init();
     while (1) {
@@ -28,6 +28,15 @@ int main() {
 
         if (k != 0) {
             moveFigure(k);
+        }
+
+
+        if( k== 6){
+            clear_screen();
+            tiempo_milisegundos = *MS_COUNTER_REG_ADDR;
+            drawlaberinto();
+            set_cursor(28, 25);
+            puts("Para reiniciar juego presione 'p'");
         }
     }
 

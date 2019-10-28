@@ -145,6 +145,15 @@ void drawlaberinto(){
     drawCherry(7, 25);
     drawCherry(7, 28);
     drawCherry(7, 31);
+
+    set_cursor(1,35);
+    set_color(WHITE, BLUE);
+    puts("M R .  D O !");
+
+    cont_unidades = 0;
+    cont_decimas = 0;
+    cont_centecimas = 0;
+
     figuraRow = 23;
     figuraCol = 38;
     drawFigure(figuraRow, figuraCol);
