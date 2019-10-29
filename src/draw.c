@@ -153,6 +153,11 @@ void drawlaberinto(){
     cont_unidades = 0;
     cont_decimas = 0;
     cont_centecimas = 0;
+    winner = 0;
+
+    for(uint8_t i = 0; i<64; i++){
+        win[i] = 0;
+    }
 
     figuraRow = 23;
     figuraCol = 38;

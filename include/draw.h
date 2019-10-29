@@ -9,7 +9,8 @@ uint8_t cont_decimas;
 uint8_t cont_centecimas;
 unsigned int tiempo_milisegundos;
 uint8_t tecla;
-
+uint8_t win[64];
+uint8_t winner;
 void paintGreen(uint8_t row_start, uint8_t row_end, uint8_t col_start, uint8_t col_end);
 void paintHallV(uint8_t row_start, uint8_t row_end, uint8_t col);
 void paintHallH(uint8_t row, uint8_t col_start, uint8_t col_end);
