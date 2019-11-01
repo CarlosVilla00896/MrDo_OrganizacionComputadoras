@@ -344,7 +344,9 @@ void winDetector(){
     // }
 }
 
-void counterSimulator(){
+
+
+void counterSimulator_c(){
     cont_unidades++;
     if (cont_unidades == 10){
         cont_unidades = 0;
