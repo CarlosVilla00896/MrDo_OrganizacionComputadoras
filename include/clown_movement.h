@@ -7,4 +7,3 @@ void counterSimulator();
 bool validateMovement(uint8_t row, uint8_t col);
 void cherriesCounter(uint8_t row, uint8_t col);
 void winDetector();
-void counterSimulator_c();

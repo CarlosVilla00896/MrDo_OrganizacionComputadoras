@@ -49,11 +49,8 @@ void moveFigure(uint8_t tecla){
     
 }
 
-bool validateMovement(uint8_t row, uint8_t col){
-    if((row>5 && row<24) && (col >5 && col<70))
-        return true;
-    return false;
-}
+extern bool validateMovement(uint8_t row, uint8_t col);
+
 void cherriesCounter(uint8_t row, uint8_t col){
     if(row == 7 && (col == 6 || col ==7)){
         win[0] = 1;
@@ -344,21 +341,4 @@ void winDetector(){
     // }
 }
 
-
-
-void counterSimulator_c(){
-    cont_unidades++;
-    if (cont_unidades == 10){
-        cont_unidades = 0;
-        cont_decimas++;
-    }
-    if(cont_decimas ==10){
-        cont_decimas = 0;
-        cont_centecimas++;
-    }
-    if(cont_decimas >= 6 && cont_unidades >= 7){
-        set_cursor(4,30);
-        set_color(WHITE, BLACK);
-        puts("HA GANADO EL JUEGO");
-    }
-}
+extern void counterSimulator();

@@ -12,4 +12,4 @@ Alcance del juego:
 *Se mantendrá un score de cuantos puntos se han hecho recolectando cerezas. 
 *Se podrá resetear el juego para jugarlo desde el inicio.
 
-El juego se gana cuando el player recoge todas las cerezas sin que lo toque ningun enemigo, se pierde cuando uno de los enemigos toca al player.
+El juego se gana cuando el player recoge todas las cerezas(67) sin que lo toque ningun enemigo, se pierde cuando uno de los enemigos toca al player.
